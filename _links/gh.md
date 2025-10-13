@@ -1,4 +1,4 @@
 ---
-permalink: /gh/
-redirect_to: https://github.com/zdlab
+permalink: /test
+redirect_to: https://google.com
 ---
