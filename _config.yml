@@ -1,0 +1,30 @@
+title: "zdlab.xyz"
+description: "Short links and redirects for zdlab.xyz"
+url: "https://zdlab.xyz"
+baseurl: ""
+permalink: pretty
+plugins:
+  - jekyll-redirect-from
+collections:
+  links:
+    output: true
+    permalink: "/:name/"
+
+# Defaults for different content types
+defaults:
+  - scope:
+      path: ""
+      type: "links"
+    values:
+      layout: "redirect"
+      sitemap: false
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "default"

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redirecting…</title>
+    <link rel="canonical" href="{{ page.redirect_to | escape }}" />
+    <meta http-equiv="refresh" content="0; url={{ page.redirect_to | escape }}" />
+    <style>
+      body { font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, sans-serif; padding: 2rem; }
+      code { background: rgba(125,125,125,.15); padding: .125rem .25rem; border-radius: 4px; }
+    </style>
+    <script>
+      (function() {
+        var target = "{{ page.redirect_to | escape | strip_newlines }}";
+        if (target) {
+          try { window.location.replace(target); } catch (_) { window.location.href = target; }
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="{{ page.redirect_to | escape }}">{{ page.redirect_to | escape }}</a>…</p>
+    <p>If you are not redirected automatically, please click the link above.</p>
+  </body>
+</html>
